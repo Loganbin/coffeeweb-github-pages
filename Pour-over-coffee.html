@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡探索之旅</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 导航栏 --> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container"> <a class="navbar-brand" href="main.html"><i class="fas fa-coffee"></i>咖啡探索之旅</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffeebeans.html">咖啡豆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffee-type.html">冲煮种类</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Pour-over-coffee.html">手冲咖啡</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">手冲咖啡指南</h1>
+            <p class="lead">探索手冲咖啡的艺术，从器具到技巧</p>
+        </div>
+    </header>
+    
+    <div class="container">
+      <nav id="toc" class="mt-5">
+        <h2>目录</h2>
+        <ul>
+          <li><a href="#equipment">手冲咖啡器具</a></li>
+          <li><a href="#steps">手冲咖啡步骤</a></li>
+          <li><a href="#techniques">冲煮技巧</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="container" id="pour-over-guide"> 
+
+        <section id="equipment" class="mt-5">
+            <h2>手冲咖啡器具</h2>
+            <p>想要冲煮一杯美味的手冲咖啡，合适的器具是必不可少的。以下是一些常用的手冲咖啡器具：</p>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/v60.jpg" class="card-img-top" alt="Hario V60 滤杯">
+                        <div class="card-body">
+                            <h5 class="card-title">滤杯</h5>
+                            <p class="card-text">滤杯是手冲咖啡的核心器具，它承载着咖啡粉，并引导热水流过咖啡粉，萃取出咖啡液。常见的滤杯种类包括 Hario V60、Kalita Wave、Melitta 等，每种滤杯都有其独特的结构和冲煮特点。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/shouchonghu.jpeg" class="card-img-top" alt="Hario Buono 手冲壶">
+                        <div class="card-body">
+                            <h5 class="card-title">手冲壶</h5>
+                            <p class="card-text">手冲壶用于控制热水的水流和水温，细长的壶嘴能够精准地控制水流，使热水均匀地浇注在咖啡粉上。选择手冲壶时，需要注意壶嘴的形状、壶身的容量和材质等因素。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/WechatIMG569.jpg" class="card-img-top" alt="滤纸">
+                        <div class="card-body">
+                            <h5 class="card-title">滤纸</h5>
+                            <p class="card-text">滤纸用于过滤咖啡渣，使咖啡液更加干净清澈。滤纸的材质和形状会影响咖啡的口感，常见的滤纸材质包括漂白滤纸和原木浆滤纸，形状则有圆锥形和扇形等。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/modou.jpg" class="card-img-top" alt="磨豆机">
+                        <div class="card-body">
+                            <h5 class="card-title">磨豆机</h5>
+                            <p class="card-text">磨豆机用于将咖啡豆研磨成咖啡粉，新鲜研磨的咖啡粉能够最大程度地保留咖啡的香气和风味。选择磨豆机时，需要注意研磨均匀度、研磨速度、清洁方便程度等因素。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/fenxiang.avif" class="card-img-top" alt="分享壶">
+                        <div class="card-body">
+                            <h5 class="card-title">分享壶</h5>
+                            <p class="card-text">分享壶用于盛放冲煮好的咖啡液，方便分享或二次分杯。分享壶的材质和保温性能是选择时需要考虑的因素</p>
+                            <br>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card equipment-card">
+                        <img src="images/toolss/dianzicheng.jpeg" class="card-img-top" alt="电子秤">
+                        <div class="card-body">
+                            <h5 class="card-title">电子秤</h5>
+                            <p class="card-text">电子秤用于精确称量咖啡豆和水的重量，以确保每次冲煮都能保持一致的比例。选择电子秤时，需要注意精度、响应速度、稳定性等因素。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>除了上述器具之外，您还可以根据自己的喜好和需求选择其他器具，例如温度计、计时器等，以提升手冲咖啡的体验。</p>
+        </section>
+
+        <section id="steps" class="mt-5">
+            <h2>手冲咖啡步骤</h2>
+            <p>手冲咖啡的步骤并不复杂，但每个步骤都需要用心操作，才能冲煮出美味的咖啡。以下是一般的手冲咖啡步骤：</p>
+      
+            <div class="step">
+              <h3>1. 准备工作</h3>
+              <ul>
+                <li>烧开水，让水温达到 90°C 左右。</li>
+                <li>将滤纸折叠成锥形，放入滤杯中，并用热水冲洗滤纸，去除纸味，然后倒掉。
+                  <ul>
+                    <li> 这一步叫做 “温杯润滤”，目的是：
+                      <ul>
+                        <li><strong>去除纸味：</strong> 滤纸本身可能带有一些纸浆的味道，热水冲洗可以去除这些异味，避免影响咖啡的风味。</li>
+                        <li><strong>贴合：</strong> 使滤纸与滤杯更加贴合</li>
+                        <li><strong>预热滤杯和分享壶：</strong> 热水可以预热滤杯和分享壶，使其温度更接近冲煮咖啡的温度，有助于保持咖啡的温度，并更稳定地萃取咖啡。</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>取15g咖啡豆，然后用磨豆机将咖啡豆研磨成中等粗细的咖啡粉，大约像砂糖的大小，研磨好之后倒入滤纸中。</li>
+              </ul>
+            </div>
+      
+            <div class="step">
+              <h3>2. 闷蒸</h3>
+              <ul>
+                <li>将研磨好的咖啡粉倒入滤杯中，轻轻摇晃，使咖啡粉表面平整。</li>
+                <li>缓慢注入少量热水 (约 30 毫升)，使咖啡粉充分吸收水分，并静置 30 秒左右倒入同时按下计时器
+                  <ul>
+                    <li> 这一步目的是：
+                      <ul>
+                        <li>排气以便让粉和水接触</li>
+                        <li>激活风味物质以使萃取</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>闷蒸的目的是为了让咖啡粉释放二氧化碳，使咖啡的香气和风味更加浓郁。</li>
+              </ul>
+            </div>
+      
+            <div class="step">
+              <h3>3. 注水</h3>
+              <ul>
+                <li>以螺旋状的方式缓慢注入热水，保持水流稳定，并控制水温在 90°C 左右。</li>
+                <li>注水时，要注意水流不要直接冲击滤纸，以免影响咖啡的口感。</li>
+                <li>可以根据咖啡豆的烘焙程度和个人喜好调整注水时间和水量。</li>
+              </ul>
+            </div>
+      
+            <div class="step">
+              <h3>4. 滴滤</h3>
+              <ul>
+                <li>等待咖啡液完全滴滤到分享壶中，滴滤时间一般为 2-3 分钟。</li>
+                <li>滴滤完成后，可以轻轻晃动分享壶，使咖啡的浓度更加均匀。</li>
+              </ul>
+            </div>
+      
+            <div class="step">
+              <h3>5. 品尝</h3>
+              <ul>
+                <li>将咖啡倒入杯中，细细品味手冲咖啡的独特风味。</li>
+                <li>可以根据个人喜好添加牛奶、糖等。</li>
+              </ul>
+            </div>
+          </section>
+      
+          <section id="techniques" class="mt-5">
+            <h2>冲煮技巧</h2>
+            <p>手冲咖啡的技巧多种多样，不同的技巧会影响咖啡的口感和风味。以下是一些常用的手冲咖啡技巧：</p>
+      
+            <div class="technique">
+              <h3>注水手法</h3>
+              <ul>
+                <li><strong>螺旋注水：</strong> 以螺旋状的方式注水，使热水均匀地浇注在咖啡粉上。</li>
+                <li><strong>点滴注水：</strong> 以点滴的方式注水，控制水流更加精准。</li>
+                <li><strong>分段注水：</strong> 将注水过程分成多个阶段，每个阶段使用不同的水温和水流。</li>
+              </ul>
+            </div>
+      
+            <div class="technique">
+              <h3>其他技巧</h3>
+              <ul>
+                <li><strong>水温控制：</strong> 不同的水温会影响咖啡的萃取率，一般来说，水温越高，咖啡的萃取率越高。</li>
+                <li><strong>研磨度调整：</strong> 咖啡粉的研磨度会影响咖啡的萃取速度，研磨度越细，萃取速度越慢。</li>
+                <li><strong>咖啡豆的选择：</strong> 不同的咖啡豆具有不同的风味特点，选择适合自己口味的咖啡豆很重要。</li>
+              </ul>
+            </div>
+      
+            <div class="technique">
+              <h3>实操注意Tpis</h3>
+              <ul>
+                <li><strong>保持器具清洁：</strong> 咖啡器具的清洁会直接影响咖啡的口感，每次使用后都要彻底清洗滤杯、手冲壶等器具。</li>
+                <li><strong>控制水流：</strong> 水流过快会使咖啡萃取不足，水流过慢会使咖啡过度萃取，都会影响咖啡的口感。 </li>
+                <li><strong>注意水温：</strong> 水温过高会使咖啡产生焦味，水温过低会使咖啡萃取不足，建议使用 90°C 左右的热水。</li>
+                <li><strong>选择合适的滤纸：</strong> 不同的滤纸会影响咖啡的口感，建议选择优质的滤纸。</li>
+                <li><strong>新鲜研磨咖啡豆：</strong> 新鲜研磨的咖啡豆能够最大程度地保留咖啡的香气和风味，建议使用磨豆机现磨现冲。</li>
+              </ul>
+            </div>
+      
+          </section>
+      
+        </main>
+      
+        <footer class="footer mt-5 py-3 bg-coffee">
+          <p class="text-center">© 2024 咖啡探索之旅</p>
+        </footer>
+      
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+      </body>
+      </html>

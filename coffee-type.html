@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡探索之旅</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container"> <a class="navbar-brand" href="main.html"><i class="fas fa-coffee"></i>咖啡探索之旅</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffeebeans.html">咖啡豆</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="coffee-type.html">冲煮种类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pour-over-coffee.html">手冲咖啡</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">冲煮方式 - 咖啡探索之旅</h1>
+            <p class="lead">各种工具，深入了解各种咖啡的冲煮类型</p>
+        </div>
+    </header>
+
+
+    <main class="container" id="coffee-types"> 
+        
+            <h2>咖啡冲煮方式</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="french-press">
+                    <img src="images/hu/fashi.webp" class="card-img-top" alt="法式压滤壶">
+                    <div class="card-body">
+                        <h5 class="card-title">法式压滤壶</h5>
+                        <p class="card-text">简单易上手，口感浓郁，适合在家中制作。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="french-press-content">
+                            <p>法式压滤壶，又称法压壶，是一种简单而受欢迎的咖啡冲泡方法。它使用粗研磨的咖啡粉，通过浸泡和按压的方式提取咖啡，带来浓郁的口感和丰富的油脂。</p>
+                            
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>简单易用：</strong>  即使是初学者也能轻松掌握。</li>
+                                <li><strong>口感浓郁醇厚：</strong>  由于使用金属滤网，法压壶能够保留咖啡中的油脂，带来更醇厚、更浓郁的口感。</li>
+                                <li><strong>经济实惠：</strong>  法压壶价格相对较低，且无需额外的滤纸，适合在家中制作。</li>
+                            </ul>
+                            
+                            <h4>冲煮步骤</h4>
+                            <ol>
+                                <li><strong>准备咖啡粉：</strong>  将咖啡豆研磨成粗颗粒，大约像粗海盐的大小。</li>
+                                <li><strong>加入咖啡粉：</strong>  将研磨好的咖啡粉倒入法压壶中。</li>
+                                <li><strong>注入热水：</strong>  将热水 (90-95°C) 缓慢注入法压壶，确保所有咖啡粉都被浸泡。</li>
+                                <li><strong>浸泡：</strong>  盖上盖子，静置浸泡 4 分钟左右。 </li>
+                                <li><strong>按下滤网：</strong>  缓慢而稳定地按下滤网，将咖啡渣与咖啡液分离。</li>
+                                <li><strong>倒出享用：</strong>  将咖啡倒入杯中，尽情享受香浓的法式压滤咖啡。</li>
+                            </ol>
+                            
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>使用新鲜烘焙的咖啡豆，以获得最佳风味。</li>
+                                <li>控制水温，过高的水温会使咖啡产生苦味。</li>
+                                <li>不要过度浸泡，否则咖啡会变得苦涩。</li>
+                                <li>定期清洁法压壶，避免咖啡渣残留影响风味。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="pour-over">
+                    <img src="images/hu/shouchong.jpg" class="card-img-top" alt="手冲">
+                    <div class="card-body">
+                        <h5 class="card-title">手冲咖啡</h5>
+                        <p class="card-text">需要一定的技巧，能充分展现咖啡豆的风味。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="pour-over-content">
+                            <p>手冲咖啡是一种较为精细的咖啡冲泡方式，它通过将热水缓慢而均匀地浇注在咖啡粉上，并利用滤纸过滤，萃取出咖啡精华。手冲咖啡需要一定的技巧和练习，但它能够最大程度地展现咖啡豆的独特风味。</p>
+
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>风味突出：</strong>  手冲咖啡能够更好地控制水流和水温，从而更好地萃取咖啡豆中的风味物质，展现出咖啡豆的独特风味。</li>
+                                <li><strong>口感干净：</strong>  使用滤纸过滤，能够去除咖啡中的杂质，带来更干净、更纯净的口感。</li>
+                                <li><strong>充满仪式感：</strong>  手冲咖啡的冲泡过程充满仪式感，从研磨咖啡豆到控制水流，每一个步骤都充满了乐趣。</li>
+                            </ul>
+
+                            <h4>冲煮步骤</h4>
+                            <ol>
+                                <li><strong>准备咖啡粉：</strong>  将咖啡豆研磨成中等粗细的咖啡粉，大约像砂糖的大小。</li>
+                                <li><strong>折叠滤纸：</strong>  将滤纸折叠成锥形，并将其放入滤杯中。</li>
+                                <li><strong>润湿滤纸：</strong>  用热水冲洗滤纸，以去除纸味，并预热滤杯。</li>
+                                <li><strong>加入咖啡粉：</strong>  将研磨好的咖啡粉倒入滤杯中，并轻轻摇晃，使其表面平整。</li>
+                                <li><strong>闷蒸：</strong>  缓慢注入少量热水 (约 30 毫升)，使咖啡粉充分吸收水分，并静置 30 秒左右。</li>
+                                <li><strong>注水：</strong>  以螺旋状的方式缓慢注入热水，保持水流稳定，并控制水温在 90-95°C 之间。</li>
+                                <li><strong>萃取：</strong>  继续注水，直到萃取出所需的咖啡液量。</li>
+                                <li><strong>倒出享用：</strong>  将咖啡倒入杯中，细细品味手冲咖啡的独特风味。</li>
+                            </ol>
+
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>选择合适的滤杯和滤纸，不同的滤杯和滤纸会影响咖啡的口感。</li>
+                                <li>控制水流和水温，是手冲咖啡的关键。</li>
+                                <li>使用手冲壶，可以更好地控制水流。</li>
+                                <li>练习 makes perfect!  多加练习，才能冲泡出美味的手冲咖啡。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="siphon">
+                    <img src="images/hu/hongxi.webp" class="card-img-top" alt="虹吸壶">
+                    <div class="card-body">
+                        <h5 class="card-title">虹吸壶</h5>
+                        <p class="card-text">过程充满仪式感，口感干净，富有层次感。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="siphon-content">
+                            <p>虹吸壶，又称赛风壶，是一种利用水蒸气压力和真空原理来冲泡咖啡的方法。虹吸壶的冲泡过程充满仪式感，且能够带来干净、富有层次感的咖啡口感。</p>
+
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>口感干净：</strong>  虹吸壶利用布料滤网过滤咖啡，能够去除大部分咖啡渣，带来更干净的口感。</li>
+                                <li><strong>层次感丰富：</strong>  虹吸壶的冲泡过程能够更好地控制咖啡的萃取，从而展现出咖啡的多层次风味。</li>
+                                <li><strong>观赏性强：</strong>  虹吸壶的冲泡过程非常具有观赏性，水沸腾、咖啡萃取的过程都清晰可见，令人赏心悦目。</li>
+                            </ul>
+
+                            <h4>冲煮步骤</h4>
+                            <ol>
+                                <li><strong>准备咖啡粉：</strong>  将咖啡豆研磨成中等粗细的咖啡粉，大约像砂糖的大小。</li>
+                                <li><strong>组装虹吸壶：</strong>  将上下壶组装好，并在下壶中加入适量的水。</li>
+                                <li><strong>加热：</strong>  点燃酒精灯，加热下壶中的水，使水沸腾。</li>
+                                <li><strong>上升：</strong>  当水沸腾后，水会上升到上壶中。</li>
+                                <li><strong>加入咖啡粉：</strong>  将研磨好的咖啡粉倒入上壶中，并轻轻搅拌。</li>
+                                <li><strong>浸泡：</strong>  浸泡 1 分钟左右，使咖啡粉充分萃取。</li>
+                                <li><strong>熄灭酒精灯：</strong>  熄灭酒精灯，上壶中的咖啡液会因为真空原理，流回下壶中。</li>
+                                <li><strong>倒出享用：</strong>  将咖啡倒入杯中，感受虹吸壶带来的独特咖啡体验。</li>
+                            </ol>
+
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>注意安全，使用酒精灯时要小心，防止烫伤。</li>
+                                <li>控制水温，过高的水温会使咖啡产生苦味。</li>
+                                <li>不要过度浸泡，否则咖啡会变得苦涩。</li>
+                                <li>定期清洁虹吸壶，避免咖啡渣残留影响风味。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="mocha-pot">
+                    <img src="images/hu/moka1.jpg" class="card-img-top" alt="摩卡壶">
+                    <div class="card-body">
+                        <h5 class="card-title">摩卡壶</h5>
+                        <p class="card-text">简单易操作，适合制作浓缩咖啡。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="mocha-pot-content">
+                            <p>摩卡壶，又称意式摩卡壶，是一种利用蒸汽压力来冲泡咖啡的器具。它能够制作出浓郁的浓缩咖啡，适合用来制作各种花式咖啡。</p>
+                            
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>简单易操作：</strong>  摩卡壶的结构简单，操作方便，即使是初学者也能轻松掌握。</li>
+                                <li><strong>浓缩咖啡：</strong>  摩卡壶能够制作出浓缩咖啡，适合用于制作卡布奇诺、拿铁等花式咖啡。</li>
+                                <li><strong>价格实惠：</strong>  摩卡壶价格相对较低，适合在家中制作浓缩咖啡。</li>
+                            </ul>
+
+                            <h4>冲煮步骤</h4>
+                            <ol>
+                                <li><strong>加入水：</strong>  将水注入摩卡壶的下壶，水位不要超过安全阀。</li>
+                                <li><strong>安装粉碗：</strong>  将装有咖啡粉的粉碗安装在下壶上。</li>
+                                <li><strong>组装上壶：</strong>  将上壶旋紧在下壶上。</li>
+                                <li><strong>加热：</strong>  将摩卡壶放在炉子上加热。</li>
+                                <li><strong>萃取：</strong>  当水沸腾后，蒸汽会将咖啡从下壶推至上壶。</li>
+                                <li><strong>倒出享用：</strong>  当咖啡全部流入上壶后，即可倒出享用。</li>
+                            </ol>
+
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>使用细研磨的咖啡粉，以获得最佳的浓缩咖啡。</li>
+                                <li>控制水量，不要超过安全阀，否则可能会导致摩卡壶爆炸。</li>
+                                <li>注意加热时间，不要过度加热，否则咖啡会产生焦味。</li>
+                                <li>定期清洁摩卡壶，避免咖啡渣残留影响风味。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="coffee-maker">
+                    <img src="images/hu/kafeiji.jpeg" class="card-img-top" alt="咖啡机">
+                    <div class="card-body">
+                        <h5 class="card-title">咖啡机</h5>
+                        <p class="card-text">自动化程度高，可以制作多种咖啡。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="coffee-maker-content">
+                            <p>咖啡机是一种自动化程度较高的咖啡冲泡设备，它能够制作多种咖啡，包括美式咖啡、浓缩咖啡、卡布奇诺等。咖啡机的种类繁多，从简单的滴滤式咖啡机到全自动咖啡机，应有尽有。</p>
+
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>自动化程度高：</strong>  咖啡机能够自动完成研磨、冲泡、过滤等步骤，操作简单方便。</li>
+                                <li><strong>功能多样：</strong>  许多咖啡机都具有多种功能，例如定时冲泡、保温、奶泡制作等。</li>
+                                <li><strong>效率高：</strong>  咖啡机能够快速制作咖啡，适合时间紧张的早晨或办公室使用。</li>
+                            </ul>
+
+                            <h4>冲煮步骤</h4>
+                            <p>咖啡机的冲煮步骤因型号而异，但一般包括以下步骤：</p>
+                            <ol>
+                                <li><strong>加水：</strong>  将水注入咖啡机的水箱中。</li>
+                                <li><strong>加咖啡粉：</strong>  将咖啡粉倒入咖啡机的粉槽中，或使用咖啡机自带的磨豆机研磨咖啡豆。</li>
+                                <li><strong>选择冲煮模式：</strong>  根据需要选择咖啡机的冲煮模式，例如美式咖啡、浓缩咖啡等。</li>
+                                <li><strong>启动咖啡机：</strong>  启动咖啡机，咖啡机就会自动完成冲泡过程。</li>
+                                <li><strong>倒出享用：</strong>  当咖啡冲泡完成后，即可倒出享用。</li>
+                            </ol>
+
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>选择适合自己需求的咖啡机，不同的咖啡机功能和价格差异很大。</li>
+                                <li>使用高质量的咖啡豆和水，以获得最佳的咖啡风味。</li>
+                                <li>定期清洁咖啡机，避免咖啡渣残留影响风味。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card brewing-card" data-brew-type="cold-brew">
+                    <img src="images/hu/bingdi.jpg" class="card-img-top" alt="冰滴/冷萃">
+                    <div class="card-body">
+                        <h5 class="card-title">冰滴/冷萃</h5>
+                        <p class="card-text">口感顺滑，咖啡因含量低。</p>
+                        <button class="btn btn-primary show-more">了解更多</button>
+                        <div class="coffee-type-content" id="cold-brew-content">
+                            <p>冰滴/冷萃咖啡是一种使用冷水长时间浸泡咖啡粉的冲泡方式。它能够带来顺滑、低酸的咖啡口感，且咖啡因含量较低。</p>
+
+                            <h4>特点</h4>
+                            <ul>
+                                <li><strong>口感顺滑：</strong>  由于使用冷水萃取，冰滴/冷萃咖啡的苦味较低，口感更加顺滑。</li>
+                                <li><strong>低酸：</strong>  冷萃取的过程能够减少咖啡的酸度，适合肠胃敏感的人群。</li>
+                                <li><strong>咖啡因含量低：</strong>  相较于其他冲煮方式，冰滴/冷萃咖啡的咖啡因含量较低。</li>
+                            </ul>
+
+                            <h4>冲煮步骤</h4>
+                            <ol>
+                                <li><strong>准备咖啡粉：</strong>  将咖啡豆研磨成粗颗粒，大约像粗海盐的大小。</li>
+                                <li><strong>浸泡：</strong>  将研磨好的咖啡粉放入容器中，并倒入冷水或冰水，确保所有咖啡粉都被浸泡。</li>
+                                <li><strong>冷藏：</strong>  将容器放入冰箱冷藏 12-24 小时，使咖啡粉充分萃取。</li>
+                                <li><strong>过滤：</strong>  使用滤纸或滤布过滤咖啡液，去除咖啡渣。</li>
+                                <li><strong>倒出享用：</strong>  将咖啡倒入杯中，可以根据喜好加入冰块或牛奶。</li>
+                            </ol>
+
+                            <h4>小贴士</h4>
+                            <ul>
+                                <li>使用粗研磨的咖啡粉，以避免咖啡过度萃取。</li>
+                                <li>控制浸泡时间，过长的浸泡时间会使咖啡变得苦涩。</li>
+                                <li>使用过滤后的水，以避免影响咖啡风味。</li>
+                                <li>冰滴/冷萃咖啡可以保存 5-7 天。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-5 py-3 bg-coffee">
+        <p class="text-center">© 2024 咖啡探索之旅</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

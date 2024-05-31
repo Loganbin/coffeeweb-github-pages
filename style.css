@@ -1,0 +1,833 @@
+/* 整体样式 */
+body {
+  font-family: 'Lora', serif;
+  background-color: #f5f5dc;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background-color: #8b4513;
+}
+
+.navbar-brand { 
+  color: #D2B48C;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #f5f5dc;
+  font-weight: bold;
+}
+
+/* 探索咖啡的奇妙世界 模块 */
+.jumbotron {
+  background-color: #6f4e37;
+  color: #f5f5dc;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: url("images/coffee-banner.jpg"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.jumbotron h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.jumbotron p {
+  font-size: 1.8rem;
+}
+
+/* 探索咖啡风味 模块 */
+.btn-primary {
+  background-color: #a0522d;
+  border-color: #a0522d;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease; 
+}
+
+.btn-primary:hover {
+  background-color: #a0522d; 
+}
+
+.btn-primary:active {
+  background-color: #a0522d; 
+}
+
+/* 模块标题样式 */
+section h2 { 
+  font-family: 'Playfair Display', serif;
+  color: #6f4e37;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* 模块容器样式 - 提取公共样式 */
+#coffee-map,
+#flavor-wheel,
+#coffee-journey,
+#pour-over-guide,
+#equipment,
+#steps,
+#techniques,
+#about-page {
+  background-color: #F5F5DC; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
+}
+
+/* 地图容器样式 */
+#map {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ddd;
+}
+
+/* 地图弹出的内容 */
+.map-origin-details {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.map-origin-details img {
+  max-width: 100%; 
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.map-origin-details h3 {
+  color: #6f4e37;
+}
+
+.map-origin-container {
+  margin-bottom: 3rem;
+}
+
+.map-origin-title {
+  cursor: pointer;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: 0.5rem;
+}
+
+/* 风味轮容器样式 */
+#flavor-wheel {
+  width: 800px; 
+  height: 600px; 
+}
+
+#wheel {
+  width: 100%;
+  height: 350px;
+}
+
+#legend-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#legend-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+/* 咖啡豆种类介绍模块 - 卡片样式 */
+.bean-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.bean-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bean-card img {
+  width: 60%; 
+  height: 350px;
+  border-radius: 10px 10px 0 0;
+}
+
+.bean-card .card-title {
+  color: #6f4e37;
+  font-family: 'Playfair Display', serif;
+}
+
+.bean-card .card-text {
+  color: #333;
+}
+
+.bean-card .card-text a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #a0522d;
+  color: #f5f5dc;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem; 
+}
+
+.bean-card .card-text a:hover {
+  background-color: #8b4513;
+}
+
+.bean-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bean-card .card-text {
+  flex-grow: 1;
+}
+
+/* 页脚样式 */
+.footer {
+  background-color: #6f4e37; 
+  color: #D2B48C; 
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: auto; 
+}
+
+/* 咖啡豆生长过程图解样式 */
+.journey-step {
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: calc(0.2s * var(--step-number)); /* 设置每个步骤的动画延迟 */
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.journey-step:hover {
+  transform: scale(1.1);
+  cursor: pointer; /* 鼠标悬停时变成小手 */
+}
+
+.journey-step img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 咖啡豆页面特定样式 */
+#beans-page {
+  background-color: #f5f5dc; 
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.bean-section {
+  margin-bottom: 4rem;
+}
+
+.bean-section h3 {
+  color: #6f4e37;
+}
+
+section img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+section ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+/* 首页卡片的 details 样式 */
+.bean-card details {
+  border: none;
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.bean-card summary {
+  background-color: #a0522d;
+  color: #f5f5dc;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+  text-align: left;
+  list-style: none;
+}
+
+.bean-card summary:hover {
+  background-color: #8b4513;
+}
+
+.bean-card details[open] summary {
+  background-color: #8b4513;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bean-card details[open] .card-text { 
+  border: 1px solid #a0522d;
+  color: #6f4e37;
+  border-top: none;
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bean-card .card-text p {
+  margin-bottom: 1rem; 
+}
+
+/* 咖啡豆页面样式 */
+#beans-page h2 {
+  color: #6f4e37;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* 咖啡豆卡片 */
+#beans-page .origin-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  background-color: #F5F5DC;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;  
+  display: flex;
+  flex-direction: column;
+}
+
+#beans-page .origin-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 强制卡片高度一致 */
+#beans-page .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#beans-page .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#beans-page .origin-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+#beans-page .origin-card .card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #6f4e37;
+  margin-bottom: 1rem;
+}
+
+#beans-page .origin-card .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#beans-page .origin-card p {
+  margin-bottom: 0.5rem;
+}
+
+/* 交互元素样式 */
+#beans-page .origin-card details {
+  border: none;
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+#beans-page .origin-card summary {
+  background-color: #a0522d;
+  color: #f5f5dc;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+  text-align: left;
+  list-style: none;
+}
+
+#beans-page .origin-card summary:hover {
+  background-color: #8b4513;
+}
+
+#beans-page .origin-card details[open] summary {
+  background-color: #8b4513;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#beans-page .origin-card details[open] .details-content {
+  border: 1px solid #a0522d;
+  border-top: none;
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#beans-page .origin-card .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 调整 "查看详细" 按钮的位置 */
+#beans-page .origin-card details {
+  margin-top: auto;
+}
+
+/* 调整 details 内容的字体大小和颜色 */
+#beans-page .origin-card .details-content h3 {
+  font-size: 1.2rem;
+  color: #6f4e37;
+}
+
+/* 咖啡豆卡片样式 */
+.coffee-card {
+  background-color: #F5F5DC; 
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif; 
+}
+
+.coffee-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.coffee-card h3 {
+  color: #6f4e37; 
+  font-size: 1.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.coffee-card p {
+  color: #333; 
+  font-size: 1rem; 
+  line-height: 1.6; 
+  margin-bottom: 0.25rem;
+}
+
+/* 特殊文字样式 */
+.coffee-card p:first-of-type { 
+  font-weight: bold; 
+}
+
+.coffee-card p:last-of-type { 
+  margin-bottom: 1rem; 
+}
+
+/* 筛选器样式 */
+.filters {
+  display: flex;
+  justify-content: space-around; 
+  margin-bottom: 2rem;
+}
+
+/* 美化按钮旁边的文字 */
+.filters label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-family: 'Lora', serif; 
+  color: #6f4e37;
+  font-size: 1.2rem;
+}
+
+.filters select {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f5f5dc;
+  font-family: 'Lora', serif;
+}
+
+.filters select:hover,
+.filters select:focus {
+  border-color: #a0522d;
+  outline: none; 
+}
+
+/* 咖啡种类页面 */
+#coffee-types h2 {
+  color: #6f4e37;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* 咖啡冲煮方式卡片 */
+.brewing-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  background-color: #F5F5DC; 
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#coffee-types .show-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: none; 
+}
+
+
+#coffee-types .show-more:hover, 
+#coffee-types .show-more:active {
+  background-color: #a0522d; 
+}
+
+.brewing-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 强制卡片高度一致 */
+#coffee-types .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#coffee-types .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.brewing-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px; 
+}
+
+.brewing-card .card-img-top {
+width: 100%;
+height: 200px; 
+object-fit: cover;
+}
+
+.brewing-card .card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #6f4e37;
+  margin-bottom: 1rem;
+}
+
+.brewing-card .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.brewing-card p {
+  margin-bottom: 0.5rem;
+}
+
+.brewing-card .show-more {
+  margin-top: auto;
+}
+
+.brewing-card .coffee-type-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.brewing-card .coffee-type-content.show {
+  display: block;
+}
+
+#toc ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#toc li {
+  margin-bottom: 10px;
+}
+
+#toc a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 手冲咖啡指南页面样式 */
+#pour-over-guide h2 {
+  color: #6f4e37;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#pour-over-guide p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #444; 
+}
+
+#pour-over-guide ol, 
+#pour-over-guide ul {
+  margin-left: 2rem;
+}
+
+
+/* 器具卡片样式 */
+.equipment-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5DC; 
+  transition: box-shadow 0.2s ease;
+  height: 100%; 
+}
+
+.equipment-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.equipment-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.equipment-card .card-title {
+  color: #6f4e37;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.equipment-card .card-text {
+  color: #333;
+  font-size: 0.9rem; 
+}
+
+/* 调整卡片布局 */
+.equipment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.equipment-grid .col-md-4 {
+  flex: 0 0 32%;
+  margin-bottom: 1rem;
+}
+
+/* 步骤和小模块样式 */
+.step, 
+.technique {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.step h3,
+.technique h3 {
+  color: #6f4e37;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* 关于我们页面样式 */
+.about-jumbotron {
+  background-color: #6f4e37;  
+  background-size: cover;
+  background-position: center;
+}
+
+.about-me h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+
+}
+
+/* 咖啡旅程时间线 */
+.journey-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.journey-event {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #e0ddd5; 
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.event-icon {
+  background-color: #a0522d; 
+  color: #f5f5dc; 
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.event-content h3 {
+  color: #6f4e37;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* 我的最爱 - 旋转木马 */
+.my-favorites .carousel-inner {
+  background-color: #e0ddd5; 
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.favorite-card {
+  background-color: transparent; 
+  border: none;
+}
+
+.favorite-card .card-title {
+  color: #6f4e37;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.favorite-card .card-text {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #a0522d; 
+  border-radius: 50%;
+}
+
+
+#form {
+  max-width: 500px; 
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>咖啡探索之旅</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container"> <a class="navbar-brand" href="main.html"><i class="fas fa-coffee"></i>咖啡探索之旅</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">首页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="coffeebeans.html">咖啡豆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffee-type.html">冲煮种类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pour-over-coffee.html">手冲咖啡</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">咖啡豆 - 咖啡探索之旅</h1>
+            <p class="lead">从产地到品种，深入了解咖啡豆的多样性</p>
+        </div>
+    </header>
+    <main class="container" id="beans-page">
+        <h2>各个产地的咖啡豆风味特征</h2>
+        <div class="row">
+
+            <!-- 埃塞俄比亚 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="ethiopia">
+                    <div class="card-body"> 
+                        <h5 class="card-title">埃塞俄比亚<br>ETHIOPIA</h5>
+                        <p>公认的咖啡发源地，独特的花果香调性和高性价比，拥有最多的咖啡品种。</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>耶加雪菲，哈拉尔，西达摩，古吉，列坎普提，利姆&季马</p>
+                                <h3>【主要品种】</h3>
+                                <p>埃塞俄比亚原生种等</p>
+                                <h3>【风味特征】</h3>
+                                <p>以花香、果香闻名，茉莉花香和柑橘柠檬香， 有明亮的酸感。 但是，埃塞俄比亚咖啡产区众多，不同产区地理微气候的差异，加上水洗或日晒处理差异，咖啡豆风味也就不同。</p>
+                                <ul>
+                                    <li>水洗：花香、酸味重、醇度低</li>
+                                    <li>日晒：热带水果、草莓香</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 巴西 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="brazil">
+                    <div class="card-body">
+                        <h5 class="card-title">巴西<br>BRAZIL</h5>
+                        <p>目前是世界上最大的咖啡生产国，咖啡产量和市场走势对全球的咖啡市场具有影响。</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>喜拉多，圣保罗州，巴伊亚，南米纳斯等</p>
+                                <h3>【主要品种】</h3>
+                                <p>红波旁、黄波旁、新世界、卡杜艾为主力品种</p>
+                                <h3>【处理法】</h3>
+                                <p>1990年前日晒法(1990年后有半水洗法或者称半日晒法<br>
+                                    半水洗法：分拣筛选-脱果皮果肉与部分胶质层-水洗一个小时---豆壳上残留果胶-曝晒晾干
+                                </p>
+                                <h3>【风味特征】</h3>
+                                <p>具有独特的风味，特别是酸度低、口感顺滑且甜美。它通常带有一丝巧克力、焦糖或轻微坚果的味道。确切风味特征最终取决于樱桃的品种。</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 巴拿马 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="panama">
+                    <div class="card-body">
+                        <h5 class="card-title">巴拿马<br>PANAMA</h5>
+                        <p>巴拿马的咖啡种植，一般是家族庄园化种植，很多庄园都经过了三代左右的经营。</p>
+                        
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>波奎特、江肯、雷纳西米恩</p>
+                                <h3>【主要品种】</h3>
+                                <p>瑰夏、铁皮卡、波旁、卡杜拉、卡杜艾</p>
+                                <h3>【风味特征】</h3>
+                                <p>热带水果，甜感，醇度低，口感细致</p>
+                                <h3>【著名咖啡豆】</h3>
+                                <p>翡翠庄园瑰夏<br>
+                                瑰夏咖啡具有浓郁的花香，还具有丰富的果香，包括草莓、樱桃、蓝莓、芒果等，巧克力香气浓郁，给人一种浓郁、醇厚的感觉，口感柔和、顺滑、丰富，给人一种愉悦的口感体验，余味悠长，让人回味无穷。
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 危地马拉 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="guatemala">
+                    <div class="card-body">
+                        <h5 class="card-title">危地马拉<br>GUATEMALA</h5>
+                        <p>是世界顶级咖啡产区之一，危地马拉成为中美洲最大的咖啡生产国</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>安提瓜，阿卡特南戈产区，阿蒂特兰湖，圣马可火山产区，法拉汉尼斯<br>
+                                    高原，薇薇特南果，雨林柯班，新东方
+                                </p>
+                                <h3>【主要品种】</h3>
+                                <p>98%为阿拉比卡，2%罗布斯塔。<br>
+                                    波旁、卡杜拉、卡杜艾、铁皮卡、帕奇，也有少量黄波旁、瑰<br>
+                                    夏和帕卡马拉。
+                                </p>
+                                <h3>【风味特征】</h3>
+                                <p>温和醇厚，浓郁的碳烧香，烟草，坚果、巧克力甜与烟气的混合，风味浓郁，温和，醇厚，偏酸。各产区咖啡呈现不同的风味。
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 哥伦比亚 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="colombia">
+                    <div class="card-body">
+                        <h5 class="card-title">哥伦比亚<br>COLOMBIA</h5>
+                        <p>咖啡大多数种植在山区中，是世界上最大的中度水洗阿拉比卡咖啡豆生产国</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>桑坦德，考卡，乌拉伊，纳里尼奥，托利马，金迪奥等</p>
+                                <h3>【主要品种】</h3>
+                                <p>卡杜拉、卡斯提优种</p>
+                                <h3>【风味特征】</h3>
+                                <p>哥伦比亚咖啡口味浓郁，坚果，巧克力，果香，有的甜美如果酱，醇度适中，酸度适中，顺滑。</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 洪都拉斯 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="honduras">
+                    <div class="card-body">
+                        <h5 class="card-title">洪都拉斯<br>HONDURAS</h5>
+                        <p>中美洲地区最大的咖啡生产国之一，也是世界第七大咖啡产国</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>科潘，阿卡塔，欧巴拉卡，科马亚瓜，蒙德西右斯，埃尔帕拉伊索</p>
+                                <h3>【主要品种】</h3>
+                                <p>卡杜拉、卡杜艾、波旁、帕卡斯、铁皮卡</p>
+                                <h3>【风味特征】</h3>
+                                <p>水果调性，甜感，复杂的果味，活泼的酸度，坚果，温和清淡。</p>
+                                <h3>【著名咖啡豆】</h3>
+                                <p>雪莉&荔枝兰<br>
+                                    雪莉：使用的是雪莉酒桶做发酵处理，更平衡赋予，酸度不会太突出，明显的酒韵以及黑可可，宛如一个酒心巧克力。<br>
+                                    荔枝兰：使用白兰地酒桶发酵，酒韵，还带有持久的发酵感，冷下来会是荔枝、葡萄的调性，精致优雅。
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 乌干达 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="uganda">
+                    <div class="card-body">
+                        <h5 class="card-title">乌干达<br>UGANDA</h5>
+                        <p>乌干达是世界上少数拥有原生咖啡树种的国家，它的原生品种就是罗布斯塔。</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>罗布斯塔咖啡种植：乌干达中部、东部、西部和东南部的低海拔地区，海拔高达1200米。<br>
+                                    阿拉比卡咖啡种植：东部阿尔贡山斜坡的高地地区及西南部地区的鲁文佐里山。
+                                </p>
+                                <h3>【主要品种】</h3>
+                                <p>种植品种罗布斯塔主要有恩甘达和埃瑞克塔<br>
+                                    阿拉比卡种主要有SL-28，SL-14，铁比卡，肯特
+                                </p>
+                                <h3>【风味特征】</h3>
+                                <p>乌干达咖啡较为平衡，柔和，清新，醇厚度圆润，特有巧克力、奶油、香草风味。高品质的乌干达咖啡喝起来会有甜感，丰满的黑色水果味，喝完后的余韵十分干净。</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 哥斯达黎加 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="costarica">
+                    <div class="card-body">
+                        <h5 class="card-title">哥斯达黎加<br>COSTARICA</h5>
+                        <p>通过蜜处理法间名于咖啡世界的产国，咖啡颗粒饱满、酸度理想、香味独特浓烈。</p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>西部山谷，中央谷地，塔拉珠<br>
+                                    三水河，欧罗西，布伦卡，杜利阿尔四
+                                </p>
+                                <h3>【主要品种】</h3>
+                                <p>卡杜拉、波旁、卡杜艾等</p>
+                                <h3>【处理法】</h3>
+                                <p>蜜处理法，日晒法和水洗法<br>
+                                    蜜处理法：筛选-去除果皮和果肉，保留果胶-放在遮阴通风的地方自然阳<br>
+                                    干 （12-14天)-检查含水率与发酵的合格程度-水洗1小时--豆壳上残留果胶-<br>
+                                    -曝晒晾干
+                                </p>
+                                <h3>【风味特征】</h3>
+                                <p>咖啡具有奔放迷人的香气、清爽明亮的酸质与独特的口感，层次主富<br>
+                                    整体表现均宜,平衡，甜感和水果调性。
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 肯尼亚 -->
+            <div class="col-md-4">
+                <div class="card origin-card" id="kenya">
+                    <div class="card-body">
+                        <h5 class="card-title">肯尼亚<br>KENYA</h5>
+                        <p>
+                            肯尼亚咖啡以其明亮的酸感和浓郁的果香著称，是比较独一无二的风味体验。
+                        </p>
+                        <details>
+                            <summary>查看详细</summary>
+                            <div class="details-content">
+                                <h3>【主要产区】</h3>
+                                <p>涅里，马萨比特，穆拉雅，梅鲁，恩布，基里尼亚</p>
+                                <h3>【主要品种】</h3>
+                                <p>SL28,SL34,K7,肯特，鲁伊鲁2</p>
+                                <h3>【风味特征】</h3>
+                                <p>肯尼亚咖啡最为鲜明的风味特色，是其明亮、千净的酸度，这样的酸度会让一部分人望而却步却也让很多人为之着迷。肯尼亚咖啡带有莓果如黑加仑、柑橘调性，并有着甜美的花果香气和酒香，醇厚度中等，有突出的果汁感。
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+
+        <section id="coffee-list" class="container"> 
+          <h2>各地咖啡豆介绍</h2>
+        
+          <div class="filters">
+              <label for="region-filter">地区:</label>
+              <select id="region-filter">
+                  <option value="">全部</option>
+                  <option value="埃塞俄比亚">埃塞俄比亚</option>
+                  <option value="巴拿马">巴拿马</option>
+                  <option value="危地马拉">危地马拉</option>
+                  <option value="哥伦比亚">哥伦比亚</option>
+                  <option value="洪都拉斯">洪都拉斯</option>
+                  <option value="乌干达">乌干达</option>
+                  <option value="哥斯达黎加">哥斯达黎加</option>
+                  <option value="肯尼亚">肯尼亚</option>
+                  <option value="云南">云南</option>
+                  <option value="巴西">巴西</option>
+                  
+              </select>
+          
+              <label for="roast-filter">烘焙度:</label>
+              <select id="roast-filter">
+                  <option value="">全部</option>
+                  <option value="浅度烘焙">浅度烘焙</option>
+                  <option value="中度烘焙">中度烘焙</option>
+                  <option value="深度烘焙">深度烘焙</option>
+              </select>
+
+              <label for="category-filter">处理方法:</label>
+              <select id="category-filter">
+                  <option value="">全部</option>
+                  <option value="日晒">日晒</option>
+                  <option value="水洗">水洗</option>
+                  <option value="蜜处理">蜜处理</option>
+              </select>
+          </div>
+        
+          <div class="coffee-grid row"> 
+            
+          </div>
+      </section>
+      
+      <footer class="footer mt-5 py-3 bg-coffee">
+        <p class="text-center">© 2024 咖啡探索之旅</p>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

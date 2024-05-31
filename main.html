@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡探索之旅</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico"> 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container"> <a class="navbar-brand" href="main.html"><i class="fas fa-coffee"></i>咖啡探索之旅</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="main.html">首页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffeebeans.html">咖啡豆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffee-type.html">冲煮种类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pour-over-coffee.html">手冲咖啡</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">探索咖啡的奇妙世界</h1>
+            <p class="lead">在这里，你将开启一段奇妙的咖啡探索之旅</p>
+        </div>
+    </header>
+    <div class="container">
+        <section class=" my-5" id="coffee-journey">
+            <h2>咖啡豆的旅程</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 journey-step" data-step="1">
+                    <img src="images/7_upscayl_4x_realesrgan-x4fast.png" alt="种植"
+                        class="img-fluid rounded-circle">
+                    <h3>种植</h3>
+                    <p>咖啡树的种植需要适宜的气候和土壤条件，通常在热带或亚热带地区。</p>
+                    
+                </div>
+                <div class="col-md-4 mb-4 journey-step" data-step="2">
+                    <img src="images/2_upscayl_4x_realesrgan-x4fast.png" alt="采摘"
+                        class="img-fluid rounded-circle">
+                    <h3>采摘</h3>
+                    <p>咖啡果实成熟后，需要手工或机器进行采摘。</p>
+                </div>
+                <div class="col-md-4 mb-4 journey-step" data-step="3">
+                    <img src="images/3_upscayl_4x_realesrgan-x4fast.png" alt="处理"
+                        class="img-fluid rounded-circle">
+                    <h3>处理</h3>
+                    <p>咖啡果实经过处理，去除果肉和果皮，得到咖啡豆。</p>
+                </div>
+                <div class="col-md-4 mb-4 journey-step" data-step="4">
+                    <img src="images/4_upscayl_4x_realesrgan-x4fast.png" alt="干燥"
+                        class="img-fluid rounded-circle">
+                    <h3>干燥</h3>
+                    <p>咖啡豆需要进行干燥，以降低水分含量，方便储存和运输。</p>
+                </div>
+                <div class="col-md-4 mb-4 journey-step" data-step="5">
+                    <img src="images/1_upscayl_4x_realesrgan-x4fast.png" alt="烘焙"
+                        class="img-fluid rounded-circle">
+                    <h3>烘焙</h3>
+                    <p>咖啡豆经过烘焙，才能释放出独特的香气和风味。</p>
+                </div>
+                <div class="col-md-4 mb-4 journey-step" data-step="6">
+                    <img src="images/6.jpg" alt="研磨和冲煮"
+                        class="img-fluid rounded-circle">
+                    <h3>研磨和冲煮</h3>
+                    <p>将烘焙好的咖啡豆研磨成粉，然后用不同的方法冲煮成咖啡。</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="coffee-map" class="container my-5">
+            <h2>咖啡豆产地地图</h2>
+            <div id="map"></div>
+        </div>
+
+        <div id="flavor-wheel" class="container my-5">
+            <h2>咖啡豆风味轮</h2>
+            <canvas id="wheel"></canvas>
+            <div id="legend-container" class="mt-3"></div> 
+        </div>
+
+
+
+        <main class="container">
+            <section class="row mt-5">
+                <div class="container">
+                    <h2>咖啡豆主要有三大种类</h2>
+                    <div class="card-deck">
+                        <div class="card bean-card">
+                            <img src="images/arabica1.jpg" class="card-img-top" alt="阿拉比卡">
+                            <div class="card-body">
+                                <h5 class="card-title">阿拉比卡</h5>
+                                <details>
+                                <summary>查看详细</summary> 
+                                <p class="card-text">阿拉比卡种咖啡豆是世界上最受欢迎的咖啡豆之一，其特点是香气浓郁，酸度适中，口感丰富。</p>
+                                <p>代表性品种：铁皮卡、波旁瑰夏、卡杜拉</p>
+                                <p>阿拉比卡咖啡源自于埃塞俄比亚高原，由于风味品质优异，目前被广泛种植，其咖啡产量占据了全球咖啡产量的70%,在风味上，阿拉比卡咖啡豆是被认为风味最好的咖啡豆.
+                                </p>
+                                <p>特征：豆型呈椭圆形，较细长且扁平,中线呈“S”状．</p>
+                                <p>产地：埃塞俄比亚、巴西、哥伦比亚、危地马拉等．</p>
+                                <p>风味：拥有优质的酸质，更以清新的花香与舒服的酸质征服咖啡客的味蕾.</p>
+                            </details>
+                            </div>
+                        </div>
+                        <div class="card bean-card">
+                            <img src="images/robusta1.jpg" class="card-img-top" alt="罗布斯塔">
+                            <div class="card-body">
+                                <h5 class="card-title">罗布斯塔</h5>
+                                <details>
+                                    <summary>查看详细</summary> 
+                                <p class="card-text">罗布斯塔种咖啡豆以其浓郁的咖啡因和强烈的苦味而闻名，常用于制作浓缩咖啡。</p>
+                                <p>代表性品种：卡蒂姆、提摩</p>
+                                <p>罗布斯塔起源于西非刚果盆地一带,因为其生长海拔低、产量高、容易种植而广泛种植．其咖啡产量占据了全球咖啡产量的20%-30%．由于罗布斯塔对环境的适应能力极强，在海拔0-800米也能生长得很繁茂.
+                                </p>
+                                <p>特征：外形偏圆；中线呈“1"字形</p>
+                                <P>产地：巴西、印尼、印度、越南等</P>
+                                <p>风味：醇厚低沉的口感咖啡油脂更丰富，具有榛果小麦、谷物等风味，甚至会出现刺鼻的土味,通常用来拼配意式豆</p>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="card bean-card">
+                            <img src="images/Libericd.jpg" class="card-img-top" alt="利比里卡">
+                            <div class="card-body">
+                                <h5 class="card-title">利比里卡</h5>
+                                <details>
+                                    <summary>查看详细</summary> 
+                                <p class="card-text">利比里卡种咖啡豆较为稀有，其特点是带有烟熏和木质香气，口感独特。</p>
+                                <p>代表性品种：无</p>
+                                <p>大粒种利比里卡咖啡原生长在西非海岸利比里亚的低海拔森林里，因为其风味不佳，加上树身高采摘困滩目前种植的规模较小，约占全球产量的2%-5%，其咖啡风味以其浓郁的木材和烟熏味而闻名.
+                                </p>
+                                <p>特征：豆身瘦长，一头尖状，类似瓜子的形状，中线也呈现“1”字形</p>
+                                <p>产地：利比里亚、苏里南圭等</p>
+                                <p>风味：主调为坚果、黑巧克力的厚重感和烟熏的香气 ．又因极具强烈的烟熏感让人难以接受</p>
+                            </details>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer class="footer mt-5 py-3 bg-coffee">
+                <p class="text-center">© 2024 咖啡探索之旅</p>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
